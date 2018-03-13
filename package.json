@@ -1,7 +1,7 @@
 {
   "name": "@js-migrations/knex",
   "version": "1.0.0",
-  "description": "Implmentation of the js-migrations RepoFacade using Knex",
+  "description": "Implementation of the js-migrations RepoFacade using Knex",
   "repository": {
     "type": "git",
     "url": "https://github.com/js-migrations/knex"
