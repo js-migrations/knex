@@ -19,9 +19,6 @@ const dbConfig = {
   },
 };
 
-// tslint:disable-next-line:no-console
-console.log({ dbConfig });
-
 factoryTest(factory({
   db: connectToDb(dbConfig),
   tableName: 'migrations',
