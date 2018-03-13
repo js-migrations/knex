@@ -7,17 +7,22 @@ import { config } from 'dotenv';
 import factory from './factory';
 config();
 
+const dbConfig = {
+  client: 'mysql',
+  connection: {
+    database: process.env.KNEX_DATABASE,
+    host: '127.0.0.1',
+    ...(process.env.KNEX_PASSWORD === undefined ? {} : {
+      password: process.env.KNEX_PASSWORD,
+    }),
+    user: process.env.KNEX_USER,
+  },
+};
+
+// tslint:disable-next-line:no-console
+console.log({ dbConfig });
+
 factoryTest(factory({
-  db: connectToDb({
-    client: 'mysql',
-    connection: {
-      database: process.env.KNEX_DATABASE,
-      host: '127.0.0.1',
-      ...(process.env.KNEX_PASSWORD === undefined ? {} : {
-        password: process.env.KNEX_PASSWORD,
-      }),
-      user: process.env.KNEX_USER,
-    },
-  }),
+  db: connectToDb(dbConfig),
   tableName: 'migrations',
 }));
