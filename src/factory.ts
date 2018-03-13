@@ -1,6 +1,5 @@
 import RepoFacade from '@js-migrations/core/dist/RepoFacade';
 import FacadeConfig from './FacadeConfig';
-import MissingMigrationError from './MissingMigrationError';
 
 export default (config: FacadeConfig): RepoFacade => {
   const createTable = async () => {
