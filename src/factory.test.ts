@@ -19,7 +19,11 @@ const dbConfig = {
   },
 };
 
-factoryTest(factory({
-  db: connectToDb(dbConfig),
-  tableName: 'migrations',
-}));
+factoryTest((migrations) => {
+  return factory({
+    db: connectToDb(dbConfig),
+    lockTableName: 'migrationsLock',
+    migrations,
+    tableName: 'migrations',
+  });
+});

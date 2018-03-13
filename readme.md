@@ -3,14 +3,15 @@
 
 ### Usage
 1. Install it with `npm i @js-migrations/knex`.
-2. Use the factory to create the repository facade.
+1. [Use the factory to create the repository facade](#use-the-factory).
+1. [Use the facade with the @js-migrations/core service](https://github.com/js-migrations/core#use-the-factory).
 
 ### Use the factory
 ```typescript
-import factory from '@js-migrations/knex/dist/factory';
+import knexMigrationsRepoFactory from '@js-migrations/knex/dist/factory';
 import connectToDb from '@js-migrations/knex/dist/utils/connectToDb';
 
-const todosFacade = factory({
+const migrationsRepoFacade = knexMigrationsRepoFactory({
   db: connectToDb({
     client: 'mysql',
     connection: {
@@ -20,6 +21,15 @@ const todosFacade = factory({
       user: 'todouser',
     },
   }),
+  // Optional property.
+  lockTableName: 'migrationsLock',
+  // Optional property.
+  migrations: {
+    'your_migration_name': {
+      down: async () => {},
+      up: async () => {}
+    }
+  },
   // Optional property.
   tableName: 'migrations',
 });
