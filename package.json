@@ -43,7 +43,7 @@
     "assert-rejects": "0.1.1",
     "dotenv": "5.0.1",
     "jscpd": "0.6.17",
-    "mocha": "4.0.1",
+    "mocha": "4.1.0",
     "mysql": "2.15.0",
     "nyc": "11.3.0",
     "rimraf": "2.6.2",
