@@ -12,7 +12,7 @@ import updateProcessedMigrations from './functions/updateProcessedMigrations';
 export default (factoryConfig: FactoryConfig): RepoFacade => {
   const facadeConfig: FacadeConfig = {
     lockTableName: 'migrationsLock',
-    migrations: {},
+    migrations: [],
     tableName: 'migrations',
     ...factoryConfig,
   };

@@ -24,12 +24,11 @@ const migrationsRepoFacade = knexMigrationsRepoFactory({
   // Optional property.
   lockTableName: 'migrationsLock',
   // Optional property.
-  migrations: {
-    'your_migration_name': {
-      down: async () => {},
-      up: async () => {}
-    }
-  },
+  migrations: [{
+    down: async () => {},
+    key: 'your_migration_name',
+    up: async () => {},
+  }],
   // Optional property.
   tableName: 'migrations',
 });
