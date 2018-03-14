@@ -1,10 +1,10 @@
 import * as sourceMapSupport from 'source-map-support';
 sourceMapSupport.install();
 
-import connectToDb from '@js-entity-repos/knex/dist/utils/connectToDb';
 import factoryTest from '@js-migrations/core/dist/factoryTest';
 import { config } from 'dotenv';
 import factory from './factory';
+import connectToDb from './utils/connectToDb';
 config();
 
 const dbConfig = {
