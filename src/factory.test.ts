@@ -1,9 +1,10 @@
 import * as sourceMapSupport from 'source-map-support';
 sourceMapSupport.install();
 
+import serviceFactory from '@js-migrations/core/dist/factory';
 import factoryTest from '@js-migrations/core/dist/factoryTest';
 import { config } from 'dotenv';
-import factory from './factory';
+import repoFactory from './factory';
 import connectToDb from './utils/connectToDb';
 config();
 
@@ -20,10 +21,12 @@ const dbConfig = {
 };
 
 factoryTest((migrations) => {
-  return factory({
+  const repo = repoFactory({
     db: connectToDb(dbConfig),
     lockTableName: 'migrationsLock',
     migrations,
     tableName: 'migrations',
   });
+  const log = () => null;
+  return serviceFactory({ log, repo });
 });
