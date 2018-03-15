@@ -6,7 +6,7 @@
 1. [Use the factory to create the repository facade](#use-the-factory).
 1. [Use the facade with the @js-migrations/core service](https://github.com/js-migrations/core#use-the-factory).
 
-### Use the factory
+#### Use the factory
 ```typescript
 import knexMigrationsRepoFactory from '@js-migrations/knex/dist/factory';
 import connectToDb from '@js-migrations/knex/dist/utils/connectToDb';
