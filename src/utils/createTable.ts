@@ -7,8 +7,9 @@ export default async (config: FacadeConfig) => {
     return;
   }
   await Promise.resolve(db.schema.createTable(config.tableName, (builder) => {
-    builder.string('key').unique();
-    builder.dateTime('lastStart');
-    builder.dateTime('lastBatch');
+    builder.string('key');
+    builder.dateTime('batchStart');
+    builder.dateTime('processStart');
+    builder.dateTime('processEnd');
   }));
 };

@@ -5,9 +5,9 @@ import clearMigrations from './functions/clearMigrations';
 import getMigrations from './functions/getMigrations';
 import getProcessedMigrations from './functions/getProcessedMigrations';
 import lockMigrations from './functions/lockMigrations';
+import recordProcessedMigration from './functions/recordProcessedMigration';
 import removeProcessedMigration from './functions/removeProcessedMigration';
 import unlockMigrations from './functions/unlockMigrations';
-import updateProcessedMigrations from './functions/updateProcessedMigrations';
 
 export default (factoryConfig: FactoryConfig): RepoFacade => {
   const facadeConfig: FacadeConfig = {
@@ -21,8 +21,8 @@ export default (factoryConfig: FactoryConfig): RepoFacade => {
     getMigrations: getMigrations(facadeConfig),
     getProcessedMigrations: getProcessedMigrations(facadeConfig),
     lockMigrations: lockMigrations(facadeConfig),
+    recordProcessedMigration: recordProcessedMigration(facadeConfig),
     removeProcessedMigration: removeProcessedMigration(facadeConfig),
     unlockMigrations: unlockMigrations(facadeConfig),
-    updateProcessedMigration: updateProcessedMigrations(facadeConfig),
   };
 };
