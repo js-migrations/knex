@@ -27,6 +27,5 @@ factoryTest((migrations) => {
     migrations,
     tableName: 'migrations',
   });
-  const log = () => null;
-  return serviceFactory({ log, repo });
+  return serviceFactory({ repo });
 });
