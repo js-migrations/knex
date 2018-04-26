@@ -46,7 +46,7 @@
     "mysql": "2.15.0",
     "nyc": "11.7.1",
     "rimraf": "2.6.2",
-    "source-map-support": "0.5.4"
+    "source-map-support": "0.5.5"
   },
   "publishConfig": {
     "access": "public"
