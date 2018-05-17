@@ -37,7 +37,7 @@
     "@types/knex": "0.14.14",
     "@types/lodash": "4.14.108",
     "@types/mocha": "5.2.0",
-    "@types/node": "8.10.15",
+    "@types/node": "8.10.16",
     "@types/source-map-support": "0.4.0",
     "assert-rejects": "0.1.1",
     "dotenv": "5.0.1",
