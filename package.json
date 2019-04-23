@@ -38,7 +38,7 @@
     "@types/lodash": "4.14.123",
     "@types/mocha": "5.2.6",
     "@types/node": "8.10.34",
-    "@types/source-map-support": "0.4.1",
+    "@types/source-map-support": "0.5.0",
     "assert-rejects": "0.1.1",
     "dotenv": "5.0.1",
     "jscpd": "0.6.25",
@@ -46,7 +46,7 @@
     "mysql": "2.16.0",
     "nyc": "11.9.0",
     "rimraf": "2.6.2",
-    "source-map-support": "0.5.9"
+    "source-map-support": "0.5.12"
   },
   "publishConfig": {
     "access": "public"
